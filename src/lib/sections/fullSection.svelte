@@ -33,15 +33,15 @@
 	.desc-wrapper {
 		width: 50%;
 		height: 100%;
-        padding: 0px var(--page-padding);
+		padding: 0px var(--page-padding);
 		display: flex;
 		align-items: center;
-        @include dynamicpoint($max: 700px){
-            width: 100%;
-        }
-        @include dynamicpoint($max: 950px,$min: 700px){
-            width: 100%;
-        }
+		@include dynamicpoint($max: 700px) {
+			width: 100%;
+		}
+		@include dynamicpoint($max: 950px, $min: 700px) {
+			width: 100%;
+		}
 	}
 	.desc {
 		margin: 40px 0px;
@@ -51,11 +51,58 @@
 		height: 100%;
 		position: absolute;
 		inset: 0;
+		overflow: hidden;
 		z-index: -1;
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			-webkit-animation: ken-burn 25s infinite ease-in-out alternate;
+			animation: ken-burn 25s infinite ease-in-out alternate;
+		}
+	}
+
+	@-webkit-keyframes ken-burn {
+		0% {
+			-webkit-transform: translate(0%, 0%) scale(1, 1);
+			transform: translate(0%, 0%) scale(1, 1);
+		}
+		100% {
+			-webkit-transform: translate(150px, 30px) scale(1.3, 1.3);
+			transform: translate(150px, 30px) scale(1.3, 1.3);
+		}
+	}
+	@keyframes ken-burn {
+		0% {
+			-webkit-transform: translate(0%, 0%) scale(1, 1);
+			transform: translate(0%, 0%) scale(1, 1);
+		}
+		100% {
+			-webkit-transform: translate(150px, 30px) scale(1.3, 1.3);
+			transform: translate(150px, 30px) scale(1.3, 1.3);
+		}
+	}
+
+	@include dynamicpoint($max: 700px) {
+		@-webkit-keyframes ken-burn {
+			0% {
+				-webkit-transform: translate(0px, 0px) scale(1, 1);
+				transform: translate(0px, 0px) scale(1, 1);
+			}
+			100% {
+				-webkit-transform: translate(0px, 0px) scale(1.3, 1.3);
+				transform: translate(0px, 0px) scale(1.3, 1.3);
+			}
+		}
+		@keyframes ken-burn {
+			0% {
+				-webkit-transform: translate(0px, 0px) scale(1, 1);
+				transform: translate(0px, 0px) scale(1, 1);
+			}
+			100% {
+				-webkit-transform: translate(0px, 0px) scale(1.3, 1.3);
+				transform: translate(0px, 0px) scale(1.3, 1.3);
+			}
 		}
 	}
 </style>

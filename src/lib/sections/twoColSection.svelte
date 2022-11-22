@@ -87,13 +87,18 @@
             position: absolute;
         }
         .large-circ{
-            top: 0;
+            top: -10px;
+			right: 0;
             z-index: 0;
+			-webkit-animation: levitate 3s infinite ease-in-out alternate;
+			animation: levitate 3s infinite ease-in-out alternate;
         }
         .small-circ {
             top: 50%;
             left: -2%;
             z-index: 2;
+			-webkit-animation: levitate 4s infinite ease-in-out alternate-reverse;
+			animation: levitate 4s infinite ease-in-out alternate-reverse;
         }
 	}
 	.intro {
@@ -106,6 +111,28 @@
 			p {
 				color: getColor(darkgrays, 60);
 			}
+		}
+	}
+
+	
+	@-webkit-keyframes levitate{
+		0%{
+			-webkit-transform: translateY(0px);
+			        transform: translateY(0px);
+		}
+		100%{
+			-webkit-transform: translateY(40px);
+			        transform: translateY(40px);
+		}
+	}
+@keyframes levitate{
+		0%{
+			-webkit-transform: translateY(0px);
+			        transform: translateY(0px);
+		}
+		100%{
+			-webkit-transform: translateY(40px);
+			        transform: translateY(40px);
 		}
 	}
 </style>

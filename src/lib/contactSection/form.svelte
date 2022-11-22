@@ -49,7 +49,7 @@
 		</p>
 	</div>
 
-	<input class="cta" type="submit" value="Submit" />
+	<input class="cta wobble-hor-bottom" type="submit" value="Submit" />
 </form>
 
 <style lang="scss">
@@ -116,5 +116,6 @@
 		border: 0;
         -webkit-appearance: none;
         -moz-appearance: none;
+		cursor: pointer;
 	}
 </style>

@@ -1,6 +1,7 @@
 @use './fonts.scss';
 @use  './palettes.scss' as *;
 @use  './mixins.scss' as *;
+@use  './animations.scss';
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -23,4 +24,9 @@ body {
 	letter-spacing: 0em;
 	color: getColor(whites, 100);
 	background: getColor(darkgrays, 100);
+}
+
+.wobble-hor-bottom:hover {
+	-webkit-animation: wobble-hor-bottom 0.8s ease-in-out both;
+	        animation: wobble-hor-bottom 0.8s ease-in-out both;
 }

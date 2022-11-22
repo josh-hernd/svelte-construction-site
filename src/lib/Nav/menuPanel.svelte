@@ -22,7 +22,7 @@
 	>
 		<ul>
 			{#each index as item}
-				<li><a href={item.href}>{item.title}</a></li>
+				<li><a href={item.href} on:click={() => showPanel = ! showPanel}>{item.title}</a></li>
 			{/each}
 		</ul>
 	</div>

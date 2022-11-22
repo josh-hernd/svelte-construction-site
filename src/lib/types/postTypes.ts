@@ -197,3 +197,11 @@ export interface HeadItemsType {
     siteDescription: string
     siteImage: string
 }
+
+export type SpinnerTypes = {
+	size: string | number;
+	color: string;
+	unit: string;
+	duration: string;
+	pause: boolean;
+};
