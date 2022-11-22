@@ -1,0 +1,107 @@
+@use './mixins.scss' as *;
+@use './palettes.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;800&display=swap');
+
+$h1-font-sizes: (
+	// media: size, height
+	null: 60px,
+	small: 65px,
+	medium: (70px, 80px),
+	large: (74px, 84px)
+);
+$h2-font-size: (
+	null: 30px,
+	small: 35px,
+	medium: 40px,
+	large: ( 45px, 54px )
+);
+$h3-font-size: (
+	null: 30px,
+	small: 35px,
+	medium: 40px,
+	large: ( 45px, 54px )
+);
+$p-font-size: (
+	null: 17px,
+	small: 18px,
+	medium: 19px,
+	large: ( 20px, 32px )
+);
+$subtitle-font-size: (
+	null: 18px,
+	small: 19px,
+	medium: 20px,
+	large: ( 22px, 26px )
+);
+$link-1-size: (
+	null: 13px,
+	small: 14px,
+	medium: 15px,
+	large: ( 16px, 19px )
+);
+$link-2-size: (
+	null: 17px,
+	small: 18px,
+	medium: 19px,
+	large: ( 20px, 24px )
+);
+$cta-button: (
+	null: 15px,
+	small: 16px,
+	medium: 17px,
+	large: ( 18px, 22px )
+);
+h1 {
+	@include font-size($h1-font-sizes);
+	font-weight: 800;
+}
+
+h2 {
+	@include font-size($h2-font-size);
+	font-weight: 600;
+}
+
+h3 {
+	@include font-size($h3-font-size);
+	font-weight: 800;
+}
+
+p {
+	@include font-size($p-font-size);
+	font-weight: 500;
+}
+a {
+	text-decoration: none;
+}
+span.subtitle {
+	color: getColor(darkgrays, 80);
+	@include font-size($subtitle-font-size);
+	font-weight: 600;
+}
+.style-link-1,
+.style-link-2 {
+	color: var(--accent-color);
+}
+
+.style-link-1 {
+	@include font-size($link-1-size);
+	font-weight: 600;
+}
+
+.style-link-2 {
+	@include font-size($link-2-size);
+	font-weight: 600;
+}
+
+.cta {
+	width: max-content;
+	background: var(--accent-color);
+	border-radius: 50px;
+	a {
+		color: rgb(253, 253, 253);
+		@include font-size($cta-button);
+		font-weight: 800;
+		display: block;
+		padding: 21px 50px;
+	}
+}

@@ -1,0 +1,26 @@
+@use './fonts.scss';
+@use  './palettes.scss' as *;
+@use  './mixins.scss' as *;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+:root {
+	--nav-padding: 65px;
+	--page-padding: 65px;
+	@include dynamicpoint($max: 700px){
+		--nav-padding: 30px;
+		--page-padding: 30px;
+	}
+    --accent-color: #{getColor(oranges, 100)};
+	--sm-icons: #{getColor(whites, 100)};
+}
+body {
+	font-family: Barlow, -apple-system, BlinkMacSystemFont;
+	letter-spacing: 0em;
+	color: getColor(whites, 100);
+	background: getColor(darkgrays, 100);
+}

@@ -1,0 +1,36 @@
+$palettes: (
+	oranges: (
+		100: hsl(30, 91%, 54%),
+		80: hsl(30, 91%, 63%),
+		60: hsl(30, 91.43%, 72.55%),
+		40: hsl(30, 91.49%, 81.57%),
+		20: hsl(30.7, 91.49%, 90.78%)
+	),
+	darkgrays: (
+		100: hsl(220, 7%, 16%),
+		80: hsl(220, 7%, 33%),
+		60: hsl(220, 7%, 50%),
+		40: hsl(220, 7%, 67%),
+		20: hsl(220, 7%, 83%)
+	),
+	whites: (
+		100: hsl(0, 0%, 96%),
+		80: hsl(0, 0%, 97%),
+		60: hsl(0, 0%, 98%),
+		40: hsl(0, 0%, 98%),
+		20: hsl(0, 0%, 99%)
+	)
+);
+
+@function getColor($color, $tone) {
+	@if map-has-key($palettes, $color) {
+		$color: map-get($palettes, $color);
+		@if map-has-key($color, $tone) {
+			$tone: map-get($color, $tone);
+			@return $tone;
+		}
+	}
+
+	@debug 'unkown tone `#{$tone}` in color';
+	@return null;
+}
