@@ -25,10 +25,10 @@ export const NavElement = {
             }
         },
         htr: {
-            email: 'user@email.com',
+            email: 'jzehomeimprovement@gmail.com',
             address: {
                 title: 'Long Island, NY',
-                href: '/#some-address',
+                href: 'https://goo.gl/maps/UiF1f1nzxTjj8JAq8',
                 target: true
             }
         }

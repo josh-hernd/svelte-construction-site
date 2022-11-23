@@ -7,7 +7,7 @@ export const ContactSectionData: ContactSectionDataType = {
     blurbs: [
         {
             title: 'Long Island, NY',
-            href: '/',
+            href: 'https://goo.gl/maps/UiF1f1nzxTjj8JAq8',
             target: true,
             icon: "material-symbols:location-on-rounded"
         },
@@ -24,8 +24,8 @@ export const ContactSectionData: ContactSectionDataType = {
             icon: 'carbon:phone-voice-filled'
         },
         {
-            title: 'use@example.com',
-            href: 'mailto:use@example.com',
+            title: 'jzehomeimprovement@gmail.com',
+            href: 'mailto:jzehomeimprovement@gmail.com',
             target: false,
             icon: "ic:baseline-email"
         }
