@@ -18,8 +18,8 @@ export const ContactSectionData: ContactSectionDataType = {
             icon: 'carbon:phone-voice-filled'
         },
         {
-            title: '+1 (914) 502-7924',
-            href: 'tel:(914)502-7924',
+            title: '+1 (631) 575-7538',
+            href: 'tel:(631)575-7538',
             target: false,
             icon: 'carbon:phone-voice-filled'
         },
