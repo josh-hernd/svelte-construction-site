@@ -45,7 +45,7 @@
 	</div>
 	<div class="conditions">
 		<p>
-			By submiting you are agreing to our Terms and Conditions.
+			By submiting you are agreeing to our Terms and Conditions.
 		</p>
 	</div>
 
