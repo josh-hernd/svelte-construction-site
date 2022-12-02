@@ -14,8 +14,8 @@ export const NavElement = {
     ],
     secondary: {
         media: {
-            facebook: { href: '/' },
-            instagram: { href: '/' }
+            facebook: { href: 'https://www.facebook.com/people/JZE-Home-Improvement/100088313413412/' },
+            instagram: { href: 'https://www.instagram.com/jzehomeimprovement/' }
         },
         message: {
             text: 'Welcome to JZE',
