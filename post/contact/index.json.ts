@@ -12,14 +12,14 @@ export const ContactSectionData: ContactSectionDataType = {
             icon: "material-symbols:location-on-rounded"
         },
         {
-            title: '+1 (516) 785-1069',
-            href: 'tel:(516)785-1069',
+            title: '+1 (631) 575-7538',
+            href: 'tel:(631)575-7538',
             target: false,
             icon: 'carbon:phone-voice-filled'
         },
         {
-            title: '+1 (631) 575-7538',
-            href: 'tel:(631)575-7538',
+            title: '+1 (914) 502-7924',
+            href: 'tel:(914)502-7924',
             target: false,
             icon: 'carbon:phone-voice-filled'
         },
