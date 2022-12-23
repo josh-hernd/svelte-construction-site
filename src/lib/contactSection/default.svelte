@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ContactSectionDataType } from '$lib/types/postTypes';
-	import Form from './form.svelte';
+	import { Form } from './Form';
 
 	export let contactSection: ContactSectionDataType;
 </script>
