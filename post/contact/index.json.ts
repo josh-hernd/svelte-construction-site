@@ -32,55 +32,32 @@ export const ContactSectionData: ContactSectionDataType = {
     ],
     buildForm: [
         {
-            type: 'input', // required
-            name: 'name-first-last', // required
-            value: '', // optional
-            attributes: {
-                type: 'text', // default = text, or password, email, number, tel, optional
-                id: 'name-first-last', // optional
-                classes: ['form-control'], // optional
-                label: 'First, Last Name', // optional
-                disabled: false // optional
-            },
-            rules: ['required']
+            label: 'First, Last Name',
+            type: 'text', // required
+            name: 'firstLastName', // required
+            required: true
         },
         {
-            type: 'input', // required
-            name: 'client-email', // required
-            value: '', // optional
-            attributes: {
-                type: 'email', // default = text, or password, email, number, tel, optional
-                id: 'client-email', // optional
-                classes: ['form-control'], // optional
-                label: 'Email', // optional
-                disabled: false // optional
-            },
-            rules: ['required']
+            label: 'Email',
+            type: 'email', // required
+            name: 'email', // required
+            required: true
         },
         {
-            type: 'input', // required
-            name: 'client-phone', // required
-            value: '', // optional
-            attributes: {
-                type: 'tel', // default = text, or password, email, number, tel, optional
-                id: 'client-phone', // optional
-                classes: ['form-control'], // optional
-                label: 'Phone', // optional
-                disabled: false // optional
-            },
-            rules: ['required']
+            label: 'Phone',
+            type: 'tel', // required
+            name: 'phone', // required
+            required: true,
+            max: 11
         },
         {
+            label: 'Additional Information',
             type: 'textarea', // required
-            name: 'additional-info', // required
-            value: '', // optional
-            attributes: {
-                type: 'text', // default = text, or password, email, number, tel, optional
-                id: 'id-field-text', // optional
-                classes: ['form-control'], // optional
-                label: 'Additional Information', // optional
-                disabled: false // optional
-            }
+            name: 'additional', // required
+            required: false,
+            max: 200,
+            rows: 4,
+            cols: 30
         }
     ]
 }

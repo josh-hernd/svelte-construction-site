@@ -29,4 +29,8 @@ body {
 .wobble-hor-bottom:hover {
 	-webkit-animation: wobble-hor-bottom 0.8s ease-in-out both;
 	        animation: wobble-hor-bottom 0.8s ease-in-out both;
+			&:disabled {
+				-webkit-animation: none;
+				animation: none;
+			}
 }

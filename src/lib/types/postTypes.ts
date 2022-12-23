@@ -113,44 +113,25 @@ export interface ContactSectionDataType {
             target: boolean,
             icon: string
     }>,
-    buildForm: InputField[]
+    buildForm: InputType[]
+}
+export type EmptyFormType = {
+    firstLastName: string;
+    email: string;
+    phone: string;
+    _captcha: string;
 }
 
-const _number = 0;
-export type RulesList =
-| 'required'
-| `min:${typeof _number}`
-| `max:${typeof _number}`
-| 'email'
-| 'between'
-| 'file'
-| 'equal'
-| 'url'
-| { name: string; fnc: () => Promise<boolean> };
-
-export interface InputField {
-	type: 'input' | 'date' | 'textarea' | 'select' | 'checkbox' | 'radio' | 'file' | 'autocomplete';
-	name: string;
-	value?: unknown;
-	attributes: Attributes;
-	messages?: unknown;
-	validation?: unknown;
-    rules?: RulesList[]
+export interface InputType {
+    label: string
+    type: 'button' | 'checkbox' | 'color' | 'date' | 'email' | 'datetime-local' | 'file' | 'hidden' | 'image' | 'month' | 'number' | 'password' | 'radio' | 'range' | 'reset' | 'search' | 'submit' | 'tel' | 'text' | 'time' | 'url' | 'week' | 'textarea'
+    name: string
+    required: boolean
+    min?: number
+    max?: number
+    rows?: number
+    cols?: number
 }
-
-export interface Attributes {
-    id: string;
-	type?: 'text' | 'password' | 'email' | 'number' | 'tel' | 'range';
-	label?: string;
-	classes?: string[];
-	placeholder?: string;
-    disabled?: boolean;
-    min?: number;
-	max?: number;
-	rows?: number;
-	cols?: number;
-}
-
 
 export type FooterElementsType = {
     label: string;
@@ -205,3 +186,54 @@ export type SpinnerTypes = {
 	duration: string;
 	pause: boolean;
 };
+
+export type EmailType = {
+    fromAddress: string // AWS verified domain or email
+    toAddress: string // AWS verified domain or email
+    compose: {
+        title: string
+        preheader: string
+        logo: {
+            url: string // "https//... required"
+            src: string
+        }
+        site: {
+            label: string
+            url: string // "https//... required"
+        }
+        contact: {
+            firstName: string
+            lastName: string
+            phone: string
+            email: string
+            additional: string
+        }
+        social: {
+            facebook: string // "https//... required"
+            instagram: string // "https//... required"
+        }
+    }
+}
+
+export interface AWSResponse {
+    name:      string;
+    $fault:    string;
+    $metadata: Metadata;
+    Error:     Error;
+    RequestId: string;
+    xmlns:     string;
+}
+
+export interface Metadata {
+    httpStatusCode:  number;
+    requestId:       string;
+    attempts:        number;
+    totalRetryDelay: number;
+}
+
+export interface Error {
+    Type:    string;
+    Code:    string;
+    Message: string;
+    message: string;
+}
