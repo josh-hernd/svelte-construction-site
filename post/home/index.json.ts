@@ -74,13 +74,6 @@ export const LandingPage = {
             }
          },
          {
-            title: 'Siding & Roofing',
-            desc: 'Our experts will install your roof or siding quickly and sufficiently to leave you 100% satisfied.',
-            img: {
-               src: 'home/services/siding-roofing-blurb-image.jpeg'
-            }
-         },
-         {
             title: 'Concrete',
             desc: 'If you need distribution and application of maintenance polymer compounds for rebuilding and protecting your valuable equipment or industrial capital, we can help.',
             img: {
